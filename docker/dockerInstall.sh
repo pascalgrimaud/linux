@@ -16,3 +16,7 @@ wget -qO- https://get.docker.com/ | sh
 # Then, to enable tab-completion of Docker commands in BASH, either restart BASH or:
 source /etc/bash_completion.d/docker
 
+# If you would like to use Docker as a non-root user, you should now consider
+# adding your user to the "docker" group with something like:
+sudo usermod -aG docker `whoami`
+
