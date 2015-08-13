@@ -31,7 +31,8 @@ sudo apt-get -y install maven
 sudo apt-get -y install git
 
 # 4 : install nodeJs
-sudo apt-get -y install nodejs
+curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+sudo apt-get install -y nodejs
 # update npm
 sudo npm install -g npm
 
