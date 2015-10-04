@@ -47,7 +47,7 @@ sudo npm install -g grunt-cli
 sudo npm install -g gulp
 
 # 8 : install generator-jhipster
-sudo npm install -g generator-jhipster@2.20.0
+sudo npm install -g generator-jhipster@2.21.1
 
 # fix error npm : https://github.com/npm/npm/issues/4815
 sudo chown -R `whoami` ~/.npm
