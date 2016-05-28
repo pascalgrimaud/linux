@@ -6,5 +6,5 @@ if [ "$#" -ne 1 ]; then
 fi
 
 cd $1
-wget https://download.jetbrains.com/idea/ideaIC-14.1.tar.gz
+wget https://download.jetbrains.com/idea/ideaIU-14.1.7.tar.gz
 
