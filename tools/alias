@@ -1,0 +1,7 @@
+alias nodeln="ln -s /home/pgrimaud/projects/pascalgrimaud/jhipster-speedup/node_modules"
+alias dockerps="docker ps -a"
+alias dockerpss="docker ps -a --format \"table {{.ID}}\t{{.Status}}\t{{.Names}}\""
+alias dockerstop="docker stop \$(docker ps -q)"
+alias dockerrm="docker rm \$(docker ps -aq)"
+alias dockervolumerm="docker volume rm $\(docker volume ls -qf dangling=true\)"
+alias dockerjekyll="docker run --rm --label=jekyll --volume=\$(pwd):/site -p 4000:4000 andredumas/github-pages serve --watch"
