@@ -42,7 +42,7 @@ sudo npm install -g bower
 sudo npm install -g gulp-cli
 
 # 8 : install generator-jhipster
-sudo npm install -g generator-jhipster@3.4.0
+# sudo npm install -g generator-jhipster
 
 # fix error npm : https://github.com/npm/npm/issues/4815
 sudo chown -R `whoami` ~/.npm

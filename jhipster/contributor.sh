@@ -1,7 +1,7 @@
 #!/bin/bash
 
 repository=pascalgrimaud
-project_home="/home/pgrimaud/projects2/jhipster"
+project_home="/home/pgrimaud/projects/jhipster"
 
 function jhipster_clone {
     echo "Clone git@github.com:"$repository"/"$1".git -> https://github.com/jhipster/"$1".git"
