@@ -6,7 +6,7 @@ sudo apt-get -y update
 # install wget
 sudo apt-get -y install curl
 
-# To install Compose 1.7.1, run the following commands:
-curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > docker-compose
+# To install Compose 1.8.0, run the following commands:
+curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > docker-compose
 sudo mv docker-compose /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
