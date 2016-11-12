@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# put the version
 VERSION=1.9.0-rc4
 
 # make sure the package repository is up to date

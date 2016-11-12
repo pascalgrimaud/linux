@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# put the version -> beginning with 'v' letter
 VERSION=v0.9.0-rc1
 
 # make sure the package repository is up to date
