@@ -27,8 +27,9 @@ sudo apt-get -y install maven
 sudo apt-get -y install git
 
 # 4 : install nodeJs
-curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
 sudo apt-get install -y nodejs
+
 # update npm
 sudo npm install -g npm
 
@@ -46,4 +47,3 @@ sudo npm install -g gulp-cli
 
 # fix error npm : https://github.com/npm/npm/issues/4815
 sudo chown -R `whoami` ~/.npm
-
