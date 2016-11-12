@@ -1,0 +1,26 @@
+alias nodeln="ln -s /home/pgrimaud/projects/pascalgrimaud/jhipster-speedup/node_modules"
+
+alias dockerjekyll="docker run --rm --label=jekyll --volume=\$(pwd):/srv/jekyll -it -p 4000:4000 jekyll/jekyll:pages bundle exec jekyll serve"
+alias dockerjekyll2="docker run --rm --label=jekyll --volume=\$(pwd):/site -p 4000:4000 andredumas/github-pages serve --watch"
+
+dockerps() {
+    docker ps -a
+}
+dockerpss() {
+    docker ps -a --format "table {{.ID}}\t{{.Status}}\t{{.Image}}\t{{.Names}}"
+}
+dockerstop() {
+    docker stop $(docker ps -q)
+}
+dockerrm() {
+    docker rm $(docker ps -aq)
+}
+dockerstats() {
+    docker stats $(docker ps --format={{.Names}})
+}
+dockerrminone() {
+    docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
+}
+dockervolumerm() {
+    docker volume rm $(docker volume ls -qf dangling=true)
+}
