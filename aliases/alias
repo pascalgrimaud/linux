@@ -1,26 +1,52 @@
-alias nodeln="ln -s /home/pgrimaud/projects/pascalgrimaud/jhipster-speedup/node_modules"
+# yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+
+if [[ $TERMINIX_ID ]]; then
+  source /etc/profile.d/vte.sh
+fi
 
 alias dockerjekyll="docker run --rm --label=jekyll --volume=\$(pwd):/srv/jekyll -it -p 4000:4000 jekyll/jekyll:pages bundle exec jekyll serve"
 alias dockerjekyll2="docker run --rm --label=jekyll --volume=\$(pwd):/site -p 4000:4000 andredumas/github-pages serve --watch"
 
-dockerps() {
+dps() {
     docker ps -a
 }
-dockerpss() {
-    docker ps -a --format "table {{.ID}}\t{{.Status}}\t{{.Image}}\t{{.Names}}"
+dpss() {
+    docker ps -a --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
 }
-dockerstop() {
+dstop() {
     docker stop $(docker ps -q)
 }
-dockerrm() {
+drm() {
     docker rm $(docker ps -aq)
 }
-dockerstats() {
+dstoprm() {
+  dstop
+  drm
+}
+dstats() {
     docker stats $(docker ps --format={{.Names}})
 }
-dockerrminone() {
+drminone() {
     docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 }
-dockervolumerm() {
+dvolrm() {
     docker volume rm $(docker volume ls -qf dangling=true)
 }
+
+gorigin() {
+    git fetch origin
+    git rebase origin/master
+}
+gupstream() {
+    git fetch upstream
+    git rebase upstream/master
+}
+
+mkcd() {
+    mkdir "$1" && cd "$1"
+}
+alias npmlink="npm link generator-jhipster"
+alias yarnlink="yarn link generator-jhipster"
+
+alias cqlsh="docker run --name=cqlsh --network=host --volume=\$(pwd):/cql:ro --workdir=/cql --rm -it cassandra:2.1.15 cqlsh \$@"
