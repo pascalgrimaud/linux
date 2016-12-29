@@ -1,5 +1,6 @@
 # yarn
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin"
 
 if [[ $TERMINIX_ID ]]; then
   source /etc/profile.d/vte.sh
@@ -42,18 +43,23 @@ dstoprm() {
 dstats() {
     docker stats $(docker ps --format={{.Names}})
 }
+alias ds='while true; do TEXT=$(docker stats --no-stream $(docker ps --format={{.Names}})); sleep 0.1; clear; echo "$TEXT"; done'
+
 drminone() {
     docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
+}
+dvol {
+    docker volume ls
 }
 dvolrm() {
     docker volume rm $(docker volume ls -qf dangling=true)
 }
 
-gorigin() {
+gitorigin() {
     git fetch origin
     git rebase origin/master
 }
-gupstream() {
+gitupstream() {
     git fetch upstream
     git rebase upstream/master
 }
@@ -64,4 +70,4 @@ mkcd() {
 alias npmlink="npm link generator-jhipster"
 alias yarnlink="yarn link generator-jhipster"
 
-alias cqlsh="docker run --name=cqlsh --network=host --volume=\$(pwd):/cql:ro --workdir=/cql --rm -it cassandra:2.1.15 cqlsh \$@"
+alias dcqlsh="docker run --name=cqlsh --network=host --volume=\$(pwd):/cql:ro --workdir=/cql --rm -it cassandra:2.1.15 cqlsh \$@"
