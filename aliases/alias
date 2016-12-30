@@ -48,7 +48,7 @@ alias ds='while true; do TEXT=$(docker stats --no-stream $(docker ps --format={{
 drminone() {
     docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 }
-dvol {
+dvol() {
     docker volume ls
 }
 dvolrm() {
