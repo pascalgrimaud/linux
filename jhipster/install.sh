@@ -34,13 +34,13 @@ sudo apt-get install -y nodejs
 sudo npm install -g npm
 
 # 5 : install yeoman
-sudo npm install -g yo
+#sudo npm install -g yo
 
 # 6 : install bower
-sudo npm install -g bower
+#sudo npm install -g bower
 
 # 7 : install gulp-cli
-sudo npm install -g gulp-cli
+#sudo npm install -g gulp-cli
 
 # 8 : install generator-jhipster
 # sudo npm install -g generator-jhipster
