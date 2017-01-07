@@ -5,4 +5,4 @@ sudo apt update
 sudo apt install terminix
 
 # https://github.com/gnunn1/terminix/wiki/VTE-Configuration-Issue
-
+sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
