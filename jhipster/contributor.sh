@@ -21,7 +21,7 @@ mkdir -p "$project_home"
 
 jhipster_clone generator-jhipster
 rebase_upstream
-npm link
+yarn link
 
 jhipster_clone jhipster-core
 rebase_upstream
