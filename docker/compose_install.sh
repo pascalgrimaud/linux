@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # put the version
-VERSION=1.9.0
+VERSION=1.10.0
 
 # To install docker-compose, run the following commands:
 curl -L https://github.com/docker/compose/releases/download/"$VERSION"/docker-compose-"$(uname -s)"-"$(uname -m)" > docker-compose
