@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # put the version
-VERSION=1.11.2
+VERSION=1.16.1
 
 # To install docker-compose, run the following commands:
 curl -L https://github.com/docker/compose/releases/download/"$VERSION"/docker-compose-"$(uname -s)"-"$(uname -m)" > docker-compose
