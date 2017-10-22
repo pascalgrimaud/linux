@@ -9,3 +9,4 @@ echo "# TILIX" >> ~/.zshrc
 echo "if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then" >> ~/.zshrc
 echo "  source /etc/profile.d/vte.sh" >> ~/.zshrc
 echo "fi" >> ~/.zshrc
+
