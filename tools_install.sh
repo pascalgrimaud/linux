@@ -1,7 +1,16 @@
 #!/bin/bash
 
-# make sure the package repository is up to date
-sudo apt-get -y update
+# update
+sudo apt -y update
+
+# upgrade
+sudo apt -y upgrade
 
 # install utilities
-sudo apt-get -y install vim curl wget
+sudo apt -y install vim curl wget
+
+# git
+sudo apt -y install git
+
+# openjdk-8
+sudo apt -y install openjdk-8-jdk
