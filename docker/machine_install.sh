@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # put the version -> beginning with 'v' letter
-VERSION=v0.9.0-rc2
+VERSION=v0.13.0
 
 # Install docker-machine
 curl -L https://github.com/docker/machine/releases/download/"$VERSION"/docker-machine-"$(uname -s)"-"$(uname -m)" > docker-machine
