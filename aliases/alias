@@ -2,10 +2,20 @@
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin"
 
-if [[ $TERMINIX_ID ]]; then
+# tilix
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi
 
+# spaceship
+source "/home/pgrimaud/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_BATTERY_SHOW=false
+SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_NODE_SHOW=false
+SPACESHIP_DOCKER_SHOW=false
+
+# alias
 alias pack="mvn clean package -DskipTests"
 alias packt="mvn clean package"
 alias packp="mvn clean package -Pprod -DskipTests"
@@ -25,16 +35,16 @@ alias dockerjekyll="docker run --rm --label=jekyll --volume=\$(pwd):/srv/jekyll 
 alias dockerjekyll2="docker run --rm --label=jekyll --volume=\$(pwd):/site -p 4000:4000 andredumas/github-pages serve --watch"
 
 dps() {
-    docker ps -a
+  docker ps -a
 }
 dpss() {
-    docker ps -a --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+  docker ps -a --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
 }
 dstop() {
-    docker stop $(docker ps -q)
+  docker stop $(docker ps -q)
 }
 drm() {
-    docker rm $(docker ps -aq)
+  docker rm $(docker ps -aq)
 }
 dstoprm() {
   dstop
