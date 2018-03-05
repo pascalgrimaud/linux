@@ -34,6 +34,9 @@ alias java4p="java -Xmx1024m -jar target/*.war --spring.profiles.active=prod,swa
 alias dockerjekyll="docker run --rm --label=jekyll --volume=\$(pwd):/srv/jekyll -it -p 4000:4000 jekyll/jekyll:pages bundle exec jekyll serve"
 alias dockerjekyll2="docker run --rm --label=jekyll --volume=\$(pwd):/site -p 4000:4000 andredumas/github-pages serve --watch"
 
+# maven
+alias mvn1='mvn -Pdev -Drun.jvmArguments="-Xmx256m"'
+
 dps() {
   docker ps -a
 }
