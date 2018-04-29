@@ -47,4 +47,5 @@ rebase_upstream
 jhipster_clone ng-jhipster
 rebase_upstream
 
-
+jhipster_clone jhipster
+rebase_upstream

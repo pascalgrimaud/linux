@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker pull jhipster/jhipster-registry:v3.2.3
+docker pull jhipster/jhipster-registry:v3.2.4
 docker pull openjdk:8-jre-alpine
 docker pull mysql:5.7.20
 docker pull mariadb:10.1.17
@@ -19,4 +19,5 @@ docker pull jhipster/consul-config-loader:v0.2.2
 
 docker pull openjdk:8-jdk-alpine
 
-docker pull jhipster/jhipster:v4.10.2
+docker pull jhipster/jhipster:v4.14.1
+docker pull jhipster/jhipster-registry:develop
